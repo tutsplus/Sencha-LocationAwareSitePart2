@@ -1,0 +1,41 @@
+// Basic color definitions
+$base-color: #00E7EB;
+$base-gradient: 'matte';
+$active-color: #00BABD;
+
+// Toolbar styles
+$toolbar-base-color: $base-color;
+$toolbar-button-color: #111;
+
+// Tabbar styles
+$tabs-dark: #333;
+$tabs-dark-active-color: $base-color;
+
+// List styles
+$list-header-bg-color : #ddd;
+
+@import 'sencha-touch/default/all';
+
+// You may remove any of the following modules that you
+// do not use in order to create a smaller css file.
+@include sencha-panel;
+@include sencha-buttons;
+@include sencha-tabs;
+@include sencha-toolbar;
+@include sencha-indexbar;
+@include sencha-list;
+@include sencha-layout;
+@include sencha-carousel;
+@include sencha-loading-spinner;
+@include sencha-list-pullrefresh;
+
+
+// Icons
+@include pictos-iconmask('locate4');
+@include pictos-iconmask('list');
+@include pictos-iconmask('photos2');
+@include pictos-iconmask('chat2');
+
+// Buttons
+@include sencha-button-ui('back', #333, 'matte');
+@include sencha-button-ui('dark', #333, 'matte');

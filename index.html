@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html manifest="" lang="en-US">
+		<head>
+				<meta charset="UTF-8">
+				<title>Locator</title>
+				<style type="text/css">
+						/**
+						* Example of an initial loading indicator.
+						* It is recommended to keep this as minimal as possible to provide instant feedback
+						* while other resources are still being loaded for the first time
+						*/
+						html, body {
+								height: 100%;
+								background-color: #1985D0
+						}
+
+						#appLoadingIndicator {
+								position: absolute;
+								top: 50%;
+								margin-top: -15px;
+								text-align: center;
+								width: 100%;
+								height: 30px;
+								-webkit-animation-name: appLoadingIndicator;
+								-webkit-animation-duration: 0.5s;
+								-webkit-animation-iteration-count: infinite;
+								-webkit-animation-direction: linear;
+						}
+
+						#appLoadingIndicator > * {
+								background-color: #FFFFFF;
+								display: inline-block;
+								height: 30px;
+								-webkit-border-radius: 15px;
+								margin: 0 5px;
+								width: 30px;
+								opacity: 0.8;
+						}
+
+						@-webkit-keyframes appLoadingIndicator{
+								0% {
+								opacity: 0.8
+						}
+						50% {
+								opacity: 0
+						}
+						100% {
+								opacity: 0.8
+						}
+						}
+				</style>
+
+
+		</head>
+		<body>
+				<div id="appLoadingIndicator">
+						<div></div>
+						<div></div>
+						<div></div>
+				</div>
+
+				<!-- Place List Item -->
+				<script type="text/template" id="tpl_placelist_item">
+						{[this.getImage(values)]}
+						<div class="item" data-placelistitem-id="{id}">
+								<div class="name">{name}</div>
+								<div class="vicinity">{vicinity}</div>
+								{rating:this.getRating}
+						</div>
+				</script>
+
+    <!-- Place Details Info Page -->
+    <script type="text/template" id="tpl_place_details_info">
+      <div class="block content">
+        <div class="container">
+          <div class="name">{name}</div>
+          <div class="address">{formatted_address}</div>
+          {rating:this.getRating}
+        </div>
+        <div class="actions">
+          <div class="website">
+            <a href="{website}" target="_blank">
+              <div class="icon"></div>
+              <div class="text">Website</div>
+            </a>
+          </div>
+          <div class="phone">
+            <a href="tel:{phone}">
+              <div class="icon"></div>
+              <div class="text">Call</div>
+            </a>
+          </div>
+          <div class="profile">
+            <a href="{url}" target="_blank">
+              <div class="icon"></div>
+              <div class="text">Profile</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="block map"></div>
+    </script>
+
+
+				<!-- Place Details Review Page -->
+				<script type="text/template" id="tpl_place_details_reviews">
+						<div class="details-item body">
+								<tpl if="this.isEmpty(values)">
+										<div class="empty-text"> No review available for this place. </div>
+								</tpl>
+								<tpl for="reviews">
+										<div class="review">
+												<a href="{author_url}" target="_blank"><img class="profile-img" src="{author_url:this.getUserImage}" onerror="Locator.util.Util.onBrokenProfileImage(this)"/></a>
+												<div class="heading">By <a href="{author_url}" target="_system">{author_name:this.toTitleCase}</a><span> {time:this.getDate}</span></div>
+												<div class="details">
+														<div class="rating">
+																<tpl for="aspects">
+																		<div class="aspect"><div class="type">{type:this.toTitleCase}</div>
+																				<div class="stars">{rating:this.getStars}</div></div>
+																</tpl>
+														</div>
+														<div class="text">{[this.applyExpandable(values)]}</div>
+
+														<!-- A hidden element which holds the complete review text -->
+														<div class="full-review">{text}</div>
+												</div>
+										</div>
+								</tpl>
+						</div>		
+				</script>
+
+
+				<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+				<script type="text/javascript">
+						var script = '<script type="text/javascript" src="http://google-maps-' +
+								'utility-library-v3.googlecode.com/svn/trunk/infobubble/src/infobubble';
+						if (document.location.search.indexOf('compiled') !== -1) {
+								script += '-compiled';
+						}
+						script += '.js"><' + '/script>';
+						document.write(script);
+				</script>				
+
+				<script src="lang/En.js"></script>
+
+				<!-- The line below must be kept intact for Sencha Command to build your application -->
+				<script id="microloader" type="text/javascript" src="touch/microloader/development.js"></script>
+		</body>
+</html>

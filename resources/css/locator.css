@@ -1,0 +1,521 @@
+/* 
+    Document   : Locator
+    Created on : Mar 11, 2013, 8:50:27 PM
+    Author     : SWARNENDU
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/****************** General styles *********************/
+
+body,
+.default-bg.x-container,
+.default-bg.x-container > .x-scroll-view {
+				background: url(../images/bg.jpg) no-repeat;
+				background-size: 100% 100%;
+}
+
+.x-toolbar .x-title{
+				font-size: 16px !important;
+				color: #222;
+				text-shadow: none;
+}
+
+.transparent{
+				background: transparent !important;
+}
+
+.empty-text{
+				font-size: 14px;
+				padding: 20px;
+				color: #fff;
+}
+
+/* Rating */
+
+.ratings{
+    overflow: auto;
+}
+
+.ratings div.star{
+    float: left;
+    height: 14px;
+    width: 14px;
+    background-size: 12px !important;
+    background-position: 50%;
+}
+
+.ratings .full-star{
+    background: url(../images/full_star.png) no-repeat;
+}
+
+.ratings .half-star{
+    background: url(../images/half_star.png) no-repeat;
+}
+
+
+.ratings .no-star{
+    background: url(../images/no_star.png) no-repeat;
+}
+
+.ratings .value{
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+
+/* Pull to refresh plugin */
+
+.x-list-pullrefresh{
+				color : #fff;
+}
+
+.x-list-pullrefresh-arrow{
+				-webkit-mask: center center url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAA8CAYAAAAUufjgAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAjFJREFUeNrsmU8oREEYwOexdtNuKBfFwdVhCyfuysnFiXISS+1BLopyUpKLXETkRLaUi1LK3Q2lpPbiQLnIn03a/Hm+z86Ttv0zM++bfbOar36Hbad5v535Zp7v47iuy0wOpyoEHccRHV9L9NxPkUE/bhKCOKiOSPAdn69DsJ5I8E2HYA0QJRJ8Bb50CDYRCT7pEMQD0kwk+CByUFQEW4gE73UIhoA2IsFb4ENEMCQ5MdU1IxwygpT3oKNLMGyyYFVscdhusc8tDpu+xRG7xf95BW0O2kNiV1AgIvaQ2BzUJNgJNJYZGyUU7OG1cal4Bi68oqkDPszy2teEwJp5Cdyu/lZ1g8CwIYJ7wEF+2YmrNw90Byx3BizgKhaqizEP1wg7CLLxCEzy/CtauMeBlQDyEfNuGrgU6SyM8F9SyVgHdmRaH6tAb4XkToEp2d4M5mOK0TWMigU2koa8vJMRZPxEb2ss2LEVPMpPLlMRxBgDZjQJLgNbxb6Uab9tAn3EcifAeKkBMoLY+j0GWonk7oB+lmsFkwhidAGHBPmIeTcAnJcbKCuIMQEs+hScAzZEBqoIYuzyFVCJI36lMJ2CDfxibZeUu+EX/4uMIFP8ZyLejxkgK0hG5a8kP4IYSZbr1IuQVHmAX0HGX4VuGfZVJ6cQxPd1uoRcWqDW0SroFVzZAnJZ/h0LWhAjUUAw4XdSSsH8fExRTEgtGAOuOTETBb16Jk412e+bxOSwglYw6PgWYABvLk8P7zGJFwAAAABJRU5ErkJggg==) no-repeat;
+				background : #fff;
+}
+
+/****************** General styles ENDS *********************/
+
+
+/****************************** Category List ******************************/
+
+.category-list .x-list-item{
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed)) !important; /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#ededed 100%) !important; /* Chrome10+,Safari5.1+ */
+				border: 0 !important;
+}
+
+/****************************** Category List ENDS ******************************/
+
+
+/****************************** Place List ******************************/
+
+.placelist .x-list-emptytext{
+				font-size: 14px;
+				color: #fff;
+				padding: 20px;
+}
+
+
+.x-list.placelist .x-list-item .x-dock-horizontal{
+    border: 0 !important;
+}
+
+.x-list.placelist .x-list-item .item{
+    /*				background: rgba(255, 255, 255, 0.8);
+                                    font-size: 14px;
+                                    padding: 8px;*/
+
+    /*				background: rgba(255, 255, 255, 0.8);*/
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 8px;
+    -webkit-box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.6);
+    padding-right: 82px;
+}
+
+.x-list.placelist .x-list-item .item .name{
+    font-weight: bold;
+    margin: 3px 0 8px 0;
+}
+
+.x-list.placelist .x-item-selected .item .name,
+.x-list.placelist .x-item-selected .item .ratings .value{
+				color: #000;
+				text-shadow: none !important;
+}
+
+.x-list.placelist .x-list-item .item .vicinity{
+    font-size: 12px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.x-list.placelist .x-list-item .item .rating{
+
+}
+
+.x-list.placelist .x-list-item .photo,
+.x-list.placelist .x-list-item .icon-wrapper{
+    position: absolute;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    right: 25px;
+    top: 6px;
+}
+
+.x-list.placelist .x-list-item .photo img{
+    max-width: 75px;
+    max-height: 63px;
+    border: 2px solid white;
+    -webkit-box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.5);
+    background: black;
+}
+
+.x-list.placelist .x-list-item .icon-wrapper{
+    background: #960000;
+    border: 2px solid white;
+    -webkit-box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.x-list.placelist .x-list-item .icon{
+    width: 50px;
+    height: 50px;
+    background: white;
+    -webkit-mask-image: url(http://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png);
+    -webkit-mask-size: 35px;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: 50%;
+}
+
+
+.x-list.placelist .placelist-item-selected .item{
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b2e1ff), color-stop(100%,#66b6fc)); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top, #b2e1ff 0%,#66b6fc 100%); /* Chrome10+,Safari5.1+ */
+}
+
+.x-list.placelist .placelist-item-pressed .item{
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f9fe), color-stop(100%,#d6f0fd)); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top, #f2f9fe 0%,#d6f0fd 100%); /* Chrome10+,Safari5.1+ */
+}
+
+/****************************** Place List ENDS ******************************/
+
+
+/****************************** Infobox *********************************/
+
+.infobubble{
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#424242), color-stop(50%,#1e1e1e), color-stop(51%,#0a0e0a), color-stop(100%,#0a0809));
+				background: -webkit-linear-gradient(top, #424242 0%,#1e1e1e 50%,#0a0e0a 51%,#0a0809 100%);
+}
+
+.infobubble-content {
+				text-shadow: 0 -1px 0 #000;
+				color: #fff;
+				font-family: Helvetica Neue, Helvetica, arial;
+				font-size: 18px;
+				line-height: 25px;
+				padding: 4px 45px 4px 15px;
+				font-weight: bold;
+				background: url(../images/infoarrow.png) 95% 50% no-repeat;
+				font-size: 14px;
+}
+/***************************** Infobox ENDS ************************************/
+
+
+/****************************** Details Panel *********************************/
+
+.details-tabpanel .x-tab{
+				width: 33% !important;
+}
+
+.details-tabpanel .x-tabbar.x-docked-bottom .x-tab .x-button-icon {
+				width: 1.7em !important;
+				height: 1.7em !important;
+}
+
+/************************* Reviews *******************************/
+
+.details-item{
+
+}
+
+.details-item .block{
+				/*				background: rgba(255,255,255, 0.8);*/
+				border: 8px solid;
+				border-color: rgba(0,0,0,0.3);
+				margin: 12px;
+				border-radius: 15px;
+				-webkit-background-clip: content;
+				margin-top: 10px;
+}
+
+.details-item .block-title{
+				color: #fff;
+				margin-top: 20px;
+				font-size: 13px;
+				font-weight: bold;
+				padding-left: 25px;
+}
+
+
+.details-item .thumbnail{
+				/*				width: 70px;
+								border-radius: 5px;
+								-webkit-box-shadow: 0 0 1px 1px rgba(0,0,0,0.3);*/
+}
+
+.details-item .review{
+				font-size: 13px;
+				margin: 10px;
+				position: relative;
+				margin-top: 35px;
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+}
+
+.details-item .review .profile-img{
+				position: absolute;
+				border-radius: 30px;
+				top: -25px;
+				left: 15px;
+				-webkit-box-shadow: 0 0 5px 1px rgba(0,0,0,0.5);
+				border: 2px solid #fff;
+}
+
+.details-item .review .heading{
+				padding: 10px;
+				padding-left: 75px;
+}
+
+.details-item .review .heading a{
+				color: rgb(0, 162, 238);
+}
+
+.details-item .review .heading span{
+				font-size: 12px;
+				color: #aaa;
+}
+
+.details-item .review .details{
+				padding: 0px 10px 10px 10px;
+				display: -webkit-box;
+}
+
+.details-item .review .details .rating{
+			 width: 65px;
+}
+
+.details-item .review .details .aspect{
+				width: 40px;
+				margin: 0 auto;
+				margin-bottom: 2px;
+}
+
+
+.details-item .review .details .aspect .type{
+				font-size: 10px;
+} 
+
+.details-item .review .details .aspect .star{
+				height: 11px;
+				width: 11px;
+				background-size: 9px !important;
+}
+
+.details-item .review .details .aspect .stars{
+				font-size: 8px;
+				color: rgb(0, 122, 255);
+}
+
+.details-item .review .details .text{
+				-webkit-box-flex: 1;
+				margin-top: 10px;
+}
+
+.details-item .review .resize-action{
+				color: rgb(0, 162, 238);
+				cursor: pointer;
+				text-decoration: underline;
+}
+
+.details-item .review .full-review{
+				display: none;
+}
+/************************* Reviews ENDS *******************************/
+
+/************************* Gallery *******************************/
+
+#photos {
+				/* Prevent vertical gaps */
+				line-height: 0;
+				-webkit-column-count: 3;
+				-webkit-column-gap: 0px;
+				margin: 10px 10px 0 15px;
+
+}
+#photos img {
+				width: 95% !important;
+				height: auto !important;
+				margin: 0px 0px 10px 0px;
+				border: 2px solid rgba(0,231,235, 0.5);
+				border-radius: 5px;
+				padding: 5px;
+				background: rgba(0,0,0,0.5);
+}
+
+/************************* Gallery ENDS *******************************/
+
+
+/*********************** Gallery Carousel *************************/
+
+
+.gallery-carousel {
+				z-index: 20;
+				background: rgba(0,0,0,0.7);
+}
+
+.gallery-item{
+				max-width: 100%;
+				/*				margin-left: 1%;*/
+}
+
+.gallery-carousel .x-carousel-item .x-innerhtml{
+				height: 100% !important;
+				display: -webkit-box;
+				-webkit-box-align: center;
+				-webkit-box-pack: center;
+}
+
+.gallery-carousel .x-carousel-indicator-dark span {
+				background-color: rgba(255,255,255,0.3) !important;
+}
+
+.gallery-carousel .x-carousel-indicator-dark span.x-carousel-indicator-active {
+				background-color: rgba(255,255,255,1) !important;
+}
+
+.gallery-carousel .close-gallery{
+				position: absolute;
+				-webkit-mask-image: url(../images/close_gallery.png);
+				-webkit-mask-repeat: no-repeat;
+				background: #fff;
+				-webkit-mask-size: 32px;
+				height: 32px;
+				width: 32px;
+				margin: 10px;
+				right: 0;
+}
+
+.gallery-carousel .x-carousel-item .x-innerhtml{
+				text-align : center;
+}
+
+.gallery-carousel .item{
+    max-width : 100%;
+				max-height : 100%;
+}
+
+.gallery-carousel .nav {
+				-webkit-mask: url(../images/gallery_arrow_nav.png) no-repeat;
+				background: #fff;
+				min-width: 16px;
+				min-height: 16px;
+				-webkit-mask-position: 12px 4px;
+				width: 16px;
+				-webkit-mask-size: 16px !important;
+}
+
+.gallery-carousel .gallery-left {
+    -webkit-transform: rotate(180deg);
+}
+
+.gallery-carousel .gallery-right{
+
+}
+
+.gallery-carousel .gallery-bottombar .x-title{
+    font-size: 14px !important;
+				color : #fff;
+}
+
+
+/*********************** Gallery Carousel ENDS *************************/
+
+
+/*********************** Info *************************/
+
+.details-info {
+				font-size: 13px;
+}
+
+
+.details-info .block{
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+				margin: 15px;
+}
+
+.details-info .block .name{
+				font-size: 14px;
+				font-weight: bold;
+				color: #333;
+				margin-bottom: 10px;
+}
+
+.details-info .block .address{
+				color: #444;
+				margin-bottom: 10px;
+}
+
+.details-info .block .container{
+				padding: 10px;
+}
+
+.details-info .block .actions{
+				width: 100%;
+				margin: 0;
+				border-top: 1px solid rgba(0,0,0,0.2);
+				display: -webkit-box;
+				height: 70px;
+}
+
+.details-info .block .actions > div{
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+				width: 33.33%;
+				border-right: 1px solid #aaa;
+}
+
+.details-info .block .actions .icon{
+				width: 32px;
+				height: 42px;
+				background: #00A1A5;
+				-webkit-mask-size: 32px;
+				-webkit-mask-position: 0px 10px;
+				-webkit-mask-repeat: no-repeat;
+				margin: 5px auto;
+}
+
+.details-info .block .actions .text{
+				text-align: center;
+				font-size: 12px;
+}
+
+.details-info .block .actions a{
+				text-decoration: none;
+				color: #444;
+				font-weight: bold;
+				font-size: 12px;
+}
+
+.details-info .block .actions .phone .icon{				
+				-webkit-mask-image: url(../images/phone.png);
+}
+
+.details-info .block .actions .website .icon{				
+				-webkit-mask-image: url(../images/website.png);
+}
+
+
+.details-info .block .actions .profile .icon{
+				-webkit-mask-image: url(../images/gplus.png);
+
+}
+
+.details-info .map{
+				height: 140px;
+}
+
+
+/*********************** Info ENDS *************************/
+
+
+
+/****************************** Details Panel ENDS *********************************/
